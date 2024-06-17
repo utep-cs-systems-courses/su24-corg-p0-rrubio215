@@ -25,4 +25,15 @@ void print_triangle(int leftCol, int size)
     putchar('\n');
   }
 }
+void print_arrow(int triCol, int triSize, int sqCol, int sqSize){
+  print_triangle(triCol, triSize);
 
+  int i, j;
+  int endCol = sqCol + sqSize;
+  for(int row = 0; row < sqSize; row++){
+    int col;
+    for (col = -5; col < sqCol; col++) putchar(' ');
+    for (       ; col < endCol; col++) putchar('*');
+    putchar('\n');
+  }   
+}
